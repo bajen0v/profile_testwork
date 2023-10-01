@@ -1,0 +1,107 @@
+.top_card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.about_left img {
+    height: 100%;
+}
+
+.name_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name_container h2 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+}
+
+.name_container p {
+    align-self: flex-start;
+    font-size: 12px;
+}
+
+.name_container span svg {
+    vertical-align: sub;
+}
+
+.price_right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    height: 100%;
+}
+
+.bid_container {
+    margin-right: 10px;
+
+}
+
+.bid_container span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.sale {
+    font-size: 12px;
+    color: #14A760;
+    margin-right: 10px;
+}
+
+.date {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+
+    color: #D2D2D2;
+
+}
+
+hr {
+    width: 98%;
+    border: 0.61px solid #D2D2D2;
+}
+
+.description {
+    width: 97.5%;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.description div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description p {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: center;
+
+    color: #828282;
+}
+
+.description h2 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+    text-align: center;
+
+}
