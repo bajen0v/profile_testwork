@@ -96,26 +96,24 @@
 
 .about_profile {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 }
 
-.profile_followings,
-.profile_followers {
+.profile {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.about_profile h2 {
+
+
+.profile h2 {
     font-size: 32px;
     font-weight: 600;
     padding: 0;
 }
 
-.about_profile p {
+.profile p {
     font-family: sans-serif;
     font-size: 11px;
     color: #848586;

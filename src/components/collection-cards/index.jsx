@@ -27,6 +27,38 @@ function CollectionCards() {
         bid: "1,90",
         isBid: false,
       },
+      {
+        id: Math.random(),
+        name: "Name of jpg",
+        date: "7h 09m 12s",
+        currentBid: "Current bid",
+        bid: "1,75",
+        isBid: true
+      },
+      {
+        id: Math.random(),
+        name: "Name of jpg",
+        date: "7h 09m 12s",
+        currentBid: "Current bid",
+        bid: "1,75",
+        isBid: true
+      },
+      {
+        id: Math.random(),
+        name: "Name of jpg",
+        date: "7h 09m 12s",
+        currentBid: "Current bid",
+        bid: "1,75",
+        isBid: true
+      },
+      {
+        id: Math.random(),
+        name: "Name of jpg",
+        date: "7h 09m 12s",
+        currentBid: "Current bid",
+        bid: "1,75",
+        isBid: true
+      },
     ],
   });
 
@@ -85,7 +117,9 @@ function CollectionCards() {
 
   return (
     <>
+          <div className={s.active_container}>
         {cards}    
+        </div>
     </>
     )
 }

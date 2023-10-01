@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import SocialIcon from '../components/social-icons';
-import CollectionBar from '../components/collection-bar/index';
-import ActivityBar from '../components/activity-bar/index.jsx';
+import CollectionCards from '../components/collection-cards';
+import ActivityCards from '../components/activity-cards';
 import theme from '../components/theme-settings';
-import { IconCollection, IconActivity, IconVerify } from '../components/svg-icons';
+import {
+  IconCollection,
+  IconActivity,
+  IconVerify,
+} from '../components/svg-icons';
 
 import Button from '@mui/material/Button';
 import { ThemeProvider } from '@mui/material/styles';
@@ -15,8 +19,22 @@ import s from './styles.module.css';
 const pathName = './images/Cover.jpg';
 const widthCover = '1247px';
 
-const socialIconHight = '16px';
-const socialIconFill = '#141416'; // black
+const socialIconWidth = '16px';
+const socialIconHeight = '16px'
+const socialIconColor = '#141416'; // black
+
+const aboutPerson = [
+  { 
+    name: 'Total Sales', 
+    amount: '86 ETH' },
+  { 
+    name: 'Followers', 
+    amount: '12K' },
+  {
+    name: 'Followings',
+    amount: '587',
+  },
+];
 
 function Main() {
   const [follow, setFollow] = useState(true);
@@ -34,11 +52,7 @@ function Main() {
   return (
     <div className={s.main_container}>
       <div className={s.main_cover}>
-        <img
-          src={pathName}
-          alt='cover'
-          width={widthCover}
-        />
+        <img src={pathName} alt='cover' width={widthCover} />
       </div>
       <div className={s.profile_container}>
         <div className={s.main_profile}>
@@ -77,18 +91,14 @@ function Main() {
 
             <div className={s.bio_container}>
               <div className={s.about_profile}>
-                <div className={s.profile_sales}>
-                  <h2>86 ETH</h2>
-                  <p>Total Sales</p>
-                </div>
-                <div className={s.profile_followers}>
-                  <h2>12K</h2>
-                  <p>Followers</p>
-                </div>
-                <div className={s.profile_followings}>
-                  <h2>587</h2>
-                  <p>Followings</p>
-                </div>
+                {aboutPerson.map((el, index) => {
+                  return (
+                    <div key={index} className={s.profile}>
+                      <h2>{el.amount}</h2>
+                      <p>{el.name}</p>
+                    </div>
+                  );
+                })}
               </div>
 
               <div className={s.profile_bio}>
@@ -102,7 +112,7 @@ function Main() {
               </div>
             </div>
             <div className={s.profile_social}>
-              <SocialIcon fill={socialIconFill} height={socialIconHight} />
+              <SocialIcon fill={socialIconColor} width={socialIconWidth} height={socialIconHeight}/>
             </div>
           </div>
           <div className={s.profile_board}>
@@ -150,8 +160,8 @@ function Main() {
                   />
                 </TabList>
               </Box>
-              <TabPanel value='1'>{<CollectionBar />}</TabPanel>
-              <TabPanel value='2'>{<ActivityBar />}</TabPanel>
+              <TabPanel value='1'>{<CollectionCards />}</TabPanel>
+              <TabPanel value='2'>{<ActivityCards />}</TabPanel>
             </TabContext>
           </div>
         </div>

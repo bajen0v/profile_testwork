@@ -14,9 +14,6 @@ export default function AccordionMui({ main }) {
       <Accordion>
         <AccordionSummary
           sx={{
-            '& .MuiSvgIcon-root': {
-              fontSize: '1.2rem',
-            },
             mt: '15px',
             '& .MuiAccordionSummary-content': {
               // padding: '50px',

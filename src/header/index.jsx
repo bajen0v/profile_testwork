@@ -8,6 +8,7 @@ import { IconLogo } from '../components/svg-icons';
 import s from './styles.module.css';
 
 const colorWhiteLogo = '#141416'
+const navigation = ['DISCOVER', 'CREATORS', 'SELL', 'STATS']
 
 function Header() {
   const [connect, setConnect] = useState(false)
@@ -40,10 +41,7 @@ function Header() {
           <IconLogo fill={colorWhiteLogo}/>
         </div>
         <div className={s.nav_menu}>
-            <a onClick={onHandlerNav} href='/'>DISCOVER</a>
-            <a onClick={onHandlerNav} href='/'>CREATORS</a>
-            <a onClick={onHandlerNav} href='/'>SELL</a>
-            <a onClick={onHandlerNav} href='/'>STATS</a>
+          {navigation.map((el, index) => <a key={index} onClick={onHandlerNav} href='/'>{el}</a>)}
         </div>
       </div>
       <div className={s.right}>

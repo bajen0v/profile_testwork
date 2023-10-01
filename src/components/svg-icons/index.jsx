@@ -16,6 +16,7 @@ export function IconCollection({ fill }) {
     </SvgIcon>
   );
 }
+
 export function IconActivity({ fill }) {
   return (
     <SvgIcon sx={{ fontSize: "1.06rem" }}>
@@ -30,6 +31,7 @@ export function IconActivity({ fill }) {
     </SvgIcon>
   );
 }
+
 export function IconAllChains() {
   return (
     <SvgIcon sx={{ fontSize: "1.06rem" }}>
