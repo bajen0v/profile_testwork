@@ -1,6 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 
-const theme = createTheme({
+
+export const theme = createTheme({
     palette: {
       primary: {
         main: "#141416",
@@ -25,4 +26,30 @@ const theme = createTheme({
     spacing: (value) => value * 1,
   });
 
-export default theme
+export const btnHeaderParams = {
+  pt: 16.25,
+  pb: 16.25,
+  borderRadius: 2.8,
+  fontSize: 16,
+  fontWeight: 600,
+}
+
+
+export const btnActivityParams = {
+  bgcolor: "#FFFFFF",
+  borderRadius: "10px",
+  boxShadow: 1,
+  minWidth: '400px',
+  gap: "12px",
+  p: "13px 10px",
+};
+
+export const accordionParams = {
+  mt: '15px',
+  '& .MuiAccordionSummary-content': {
+    // padding: '50px',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    gap: '10px',
+  }
+}

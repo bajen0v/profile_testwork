@@ -1,5 +1,6 @@
 import AccordionMui from "../collection-accordion";
-import BtnActivity from "../activity-cards-buttons"
+import BtnActivity from "../activity-cards-buttons";
+
 import s from "./styles.module.css";
 
 function ActiveCards() {
@@ -7,7 +8,7 @@ function ActiveCards() {
     <>
       <div className={s.active_container}>
         <div className={s.btns_container}>
-        <BtnActivity />
+          <BtnActivity />
         </div>
         <div className={s.active_bar}>
           <AccordionMui />

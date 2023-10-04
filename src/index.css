@@ -4,7 +4,7 @@
 }
 
 body {
-  max-width: 1440px;
+  min-width: 1440px;
  
   /* margin-top: 45px; */
   /* margin-left: 93px; */

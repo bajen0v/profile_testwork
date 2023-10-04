@@ -1,34 +1,26 @@
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Button } from "@mui/material";
+import { theme, btnActivityParams } from "../theme-settings-mui/index";
+
 
 import { IconAllChains } from "../svg-icons";
-import { Button } from "@mui/material";
-
-import theme from "../theme-settings";
-
-const paramsBtn = {
-  bgcolor: "#FFFFFF",
-  borderRadius: "10px",
-  boxShadow: 1,
-  width: "48%",
-  gap: "12px",
-  p: "13px 10px",
-};
-
-const btnArray = [
-  {
-    name: "Sales",
-    icon: <ShoppingCartIcon />,
-    moreIcon: <ExpandMoreIcon />,
-  },
-  {
-    name: "All Chains",
-    icon: <IconAllChains />,
-    moreIcon: <ExpandMoreIcon />,
-  },
-];
 
 function BtnActivity() {
+
+  const btnArray = [
+    {
+      name: "Sales",
+      icon: <ShoppingCartIcon />,
+      moreIcon: <ExpandMoreIcon />,
+    },
+    {
+      name: "All Chains",
+      icon: <IconAllChains />,
+      moreIcon: <ExpandMoreIcon />,
+    },
+  ];
+
   return btnArray.map((el) => {
     return (
       <>
@@ -36,7 +28,7 @@ function BtnActivity() {
           onClick={() => alert("функционал в разработке")}
           theme={theme}
           color="primary"
-          sx={paramsBtn}
+          sx={btnActivityParams}
         >
           {el.icon}
           {el.name}

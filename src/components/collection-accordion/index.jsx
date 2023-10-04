@@ -1,40 +1,29 @@
-import React from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { IconVerify, IconBid } from '../svg-icons';
+import React from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { IconVerify, IconBid } from "../svg-icons";
 
-import s from './styles.module.css';
+import s from "./styles.module.css";
+import { accordionParams } from "../theme-settings-mui";
 
 export default function AccordionMui({ main }) {
   return (
     <div>
       <Accordion>
-        <AccordionSummary
-          sx={{
-            mt: '15px',
-            '& .MuiAccordionSummary-content': {
-              // padding: '50px',
-              justifyContent: 'space-between',
-              flexWrap: 'wrap',
-              gap: '10px',
-            },
-          }}
+        <AccordionSummary sx={accordionParams}
           expandIcon={<ExpandMoreIcon />}
-          aria-controls='panel1a-content'
-          id='panel1a-header'
+          aria-controls="panel1a-content"
+          id="panel1a-header"
         >
           <div className={s.about_left}>
-            <img src='/images/pic_activity.png' alt='' />
+            <img src="/images/pic_activity.png" alt="" />
             <div className={s.name_container}>
               <h2>NeuVey</h2>
               <p>
                 JenifferS
-                <span>
-                  <IconVerify fz='0.9rem' />
-                </span>
+                <IconVerify fz="0.9rem" />
               </p>
             </div>
           </div>
@@ -49,39 +38,31 @@ export default function AccordionMui({ main }) {
           </div>
         </AccordionSummary>
         <AccordionDetails sx={{ pt: 0 }}>
-          <Typography>
             <hr />
-
             <div className={s.description}>
               <div className={s.price}>
-                <p>USD Price</p>
                 <h2>$19K</h2>
+                <p>USD Price</p>
               </div>
-
               <div className={s.quantity}>
-                <p>Quantity</p>
                 <h2>14.9K</h2>
+                <p>Quantity</p>
               </div>
               <div className={s.floor_price}>
-                <p>floor price</p>
                 <h2>
-                  <span>
-                    <IconBid />
-                  </span>
+                  <IconBid />
                   16,4
                 </h2>
+                <p>floor price</p>
               </div>
               <div className={s.traded}>
-                <p>traded</p>
                 <h2>
-                  <span>
-                    <IconBid />
-                  </span>
+                  <IconBid />
                   26,4
                 </h2>
+                <p>traded</p>
               </div>
             </div>
-          </Typography>
         </AccordionDetails>
       </Accordion>
     </div>

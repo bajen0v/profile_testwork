@@ -31,7 +31,7 @@
     font-size: 12px;
 }
 
-.name_container span svg {
+.name_container svg {
     vertical-align: sub;
 }
 
@@ -69,23 +69,21 @@
 
 }
 
-hr {
-    width: 98%;
+.top_card hr {
+    min-height: 800px;
     border: 0.61px solid #D2D2D2;
 }
 
 .description {
-    width: 97.5%;
     margin-top: 18px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* align-items: center; */
 }
 
 .description div {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
 }
 
@@ -94,7 +92,6 @@ hr {
     font-weight: 400;
     line-height: 14px;
     text-align: center;
-
     color: #828282;
 }
 

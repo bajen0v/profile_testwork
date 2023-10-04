@@ -1,4 +1,4 @@
-import theme from "../theme-settings";
+import {theme} from "../theme-settings-mui/index";
 import { ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import { useState } from "react";
@@ -6,7 +6,6 @@ import { useState } from "react";
 import s from "./styles.module.css";
 
 function CollectionCards() {
-
   const id = Math.random();
   const id2 = Math.random();
   const [state, setState] = useState({
@@ -17,7 +16,7 @@ function CollectionCards() {
         date: "7h 09m 12s",
         currentBid: "Current bid",
         bid: "1,75",
-        isBid: true
+        isBid: true,
       },
       {
         id: id2,
@@ -33,7 +32,7 @@ function CollectionCards() {
         date: "7h 09m 12s",
         currentBid: "Current bid",
         bid: "1,75",
-        isBid: true
+        isBid: true,
       },
       {
         id: Math.random(),
@@ -41,7 +40,7 @@ function CollectionCards() {
         date: "7h 09m 12s",
         currentBid: "Current bid",
         bid: "1,75",
-        isBid: true
+        isBid: true,
       },
       {
         id: Math.random(),
@@ -49,7 +48,7 @@ function CollectionCards() {
         date: "7h 09m 12s",
         currentBid: "Current bid",
         bid: "1,75",
-        isBid: true
+        isBid: true,
       },
       {
         id: Math.random(),
@@ -57,26 +56,24 @@ function CollectionCards() {
         date: "7h 09m 12s",
         currentBid: "Current bid",
         bid: "1,75",
-        isBid: true
+        isBid: true,
       },
     ],
   });
 
-
   const cards = state.cards.map((el) => {
-
     const handlerBtnBid = (e) => {
       let cardId = state.cards.find((el) => el.id === Number(e.target.id));
       cardId.isBid = !cardId.isBid;
-      
-      setState({ ...state});
+
+      setState({ ...state });
     };
 
     return (
       <>
         <div key={el.id} id={el.id} className={s.card}>
           <div className={s.picture_container}>
-            <img src="/images/board_image.jpg" alt="" />
+            <img src="/images/pic_activity.png" alt="" />
             <div className={s.picture_date}>
               <p>{el.date}</p>
             </div>
@@ -113,15 +110,13 @@ function CollectionCards() {
         </div>
       </>
     );
-    });
+  });
 
   return (
     <>
-          <div className={s.active_container}>
-        {cards}    
-        </div>
+      <div className={s.active_container}>{cards}</div>
     </>
-    )
+  );
 }
 
 export default CollectionCards;

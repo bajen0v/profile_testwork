@@ -40,7 +40,7 @@
 
 
 .footer hr {
-    width: 100%;
+    min-width: 1000px;
     border: 1px solid #818181;
 }
 
